@@ -1,0 +1,20 @@
+{
+    "name": "Claude Office Visualizer",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.13"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode-remote.remote-containers",
+                "pkief.material-icon-theme"
+            ]
+        }
+    },
+    "forwardPorts": [8000, 3000],
+    "postStartCommand": "echo 'Container pronto! Iniciando servidores...'"
+}

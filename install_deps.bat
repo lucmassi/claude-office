@@ -1,0 +1,16 @@
+@echo off
+echo Instalando dependências do Backend...
+cd C:\AI-Office\claude-office\backend
+py -m pip install -r requirements.txt
+echo Backend OK
+
+echo Instalando dependências do Frontend...
+cd ..\frontend
+echo Verificando bun...
+if exist ..\node_modules (echo Node modules exist) else (echo Need npm install)
+echo Frontend check complete
+
+echo Configurando OpenCode plugin...
+cd ..\opencode-plugin
+echo Listing files...
+dir
